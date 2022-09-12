@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Here we have an idthat asks for the user to enter their name -->
+        <input id="name-input" type="text" placeholder="Enter your name" />
+        <!--  Here we have a button which says click me-->
+        <button id="my-button">Click Me</button>
+        <!--javascript code below-->
+        <script>
+        //Here we have a button variable which is linked to the button before in the html code
+          var myButton = document.querySelector('#my-button');
+        //Here we have a name input vairable from the one before in the html code
+          var nameInput = document.querySelector('#name-input');
+        //We add an event listener that listens and recors when we hit the button
+          myButton.addEventListener('click', function () {
+            //The conditional below checks if the inout is blank
+            if (nameInput.value !== '') {
+                //If it is not it says hello + your name you inputted
+              alert('Hello ' + nameInput.value);
+            }
+          });
+        </script> 
+    </body>
+</html>
